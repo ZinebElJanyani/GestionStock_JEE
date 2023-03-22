@@ -53,7 +53,7 @@ int product_id=0; %>
 	
 	<h4>La liste des clients</h4>
 	<div class="container">
-	<table id="example" class="table table-striped" style="width:100%">
+	<table id="example1" class="table table-striped" style="width:100%">
         <thead>
             <tr>
               <th>Nom</th>
@@ -91,12 +91,12 @@ int product_id=0; %>
     </table>
 	</div>
 	<script>$(document).ready(function () {
-	    $('#example').DataTable();
+	    $('#example1').DataTable();
 	});</script>
 	
 	<div class="container">
 	<h4>La liste des produits</h4>
-	<table id="example" class="table table-striped" style="width:100%">
+	<table id="example2" class="table table-striped" style="width:100%">
         <thead>
             <tr>
              <th>Name</th>
@@ -113,7 +113,7 @@ int product_id=0; %>
 				<td><%= p.getName()%></td>
 				<td><%= p.getType()%></td>
 				<td><%= p.getCategory().getLibelle()%></td>
-				<td><a href="ProductServlet?id=<%= p.getId_prod()%>&action=view" class="btn btn-primary">modifier</a><a href="ProductServlet?id=<%= p.getId_prod()%>&action=delete" class="btn btn-danger">supprimer</a></td>
+				<td><button class="btn btn-primary" class="form-control" type="button" onclick="createHiddenInput2('<%=p.getId_prod() %>')" >Choisir</button></td>			
 				
 			</tr>
 			<%
@@ -134,7 +134,7 @@ int product_id=0; %>
 	</div>
 	
 	<script>$(document).ready(function () {
-	    $('#example').DataTable();
+	    $('#example2').DataTable();
 	});</script>
 	</table>
 	

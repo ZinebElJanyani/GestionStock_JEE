@@ -48,7 +48,7 @@ Client cl=(Client) request.getAttribute("clientValue");
 	<input class="form-control" type="text" name="email" id="email" required value="<%= (cl==null)? "": cl.getInformation().getEmail() %>"/>
 	</div>
 	
-	<button class="btn btn-primary" class="form-control " type="submit">Ajouter</button>
+	<button class="btn btn-primary" class="form-control " type="submit">Valider</button>
 	</div>
 	<div>
 	<%@ include file="footer.jsp" %>
